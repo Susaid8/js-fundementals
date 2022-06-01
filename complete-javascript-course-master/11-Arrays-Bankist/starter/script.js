@@ -36,30 +36,30 @@ const account4 = {
 const accounts = [account1, account2, account3, account4];
 
 // Elements
-const labelWelcome = document.querySelector('.welcome');
-const labelDate = document.querySelector('.date');
-const labelBalance = document.querySelector('.balance__value');
-const labelSumIn = document.querySelector('.summary__value--in');
-const labelSumOut = document.querySelector('.summary__value--out');
-const labelSumInterest = document.querySelector('.summary__value--interest');
-const labelTimer = document.querySelector('.timer');
+// const labelWelcome = document.querySelector('.welcome');
+// const labelDate = document.querySelector('.date');
+// const labelBalance = document.querySelector('.balance__value');
+// const labelSumIn = document.querySelector('.summary__value--in');
+// const labelSumOut = document.querySelector('.summary__value--out');
+// const labelSumInterest = document.querySelector('.summary__value--interest');
+// const labelTimer = document.querySelector('.timer');
 
-const containerApp = document.querySelector('.app');
-const containerMovements = document.querySelector('.movements');
+// const containerApp = document.querySelector('.app');
+// const containerMovements = document.querySelector('.movements');
 
-const btnLogin = document.querySelector('.login__btn');
-const btnTransfer = document.querySelector('.form__btn--transfer');
-const btnLoan = document.querySelector('.form__btn--loan');
-const btnClose = document.querySelector('.form__btn--close');
-const btnSort = document.querySelector('.btn--sort');
+// const btnLogin = document.querySelector('.login__btn');
+// const btnTransfer = document.querySelector('.form__btn--transfer');
+// const btnLoan = document.querySelector('.form__btn--loan');
+// const btnClose = document.querySelector('.form__btn--close');
+// const btnSort = document.querySelector('.btn--sort');
 
-const inputLoginUsername = document.querySelector('.login__input--user');
-const inputLoginPin = document.querySelector('.login__input--pin');
-const inputTransferTo = document.querySelector('.form__input--to');
-const inputTransferAmount = document.querySelector('.form__input--amount');
-const inputLoanAmount = document.querySelector('.form__input--loan-amount');
-const inputCloseUsername = document.querySelector('.form__input--user');
-const inputClosePin = document.querySelector('.form__input--pin');
+// const inputLoginUsername = document.querySelector('.login__input--user');
+// const inputLoginPin = document.querySelector('.login__input--pin');
+// const inputTransferTo = document.querySelector('.form__input--to');
+// const inputTransferAmount = document.querySelector('.form__input--amount');
+// const inputLoanAmount = document.querySelector('.form__input--loan-amount');
+// const inputCloseUsername = document.querySelector('.form__input--user');
+// const inputClosePin = document.querySelector('.form__input--pin');
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -74,3 +74,40 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+
+// simple array methods
+// slice method; doesnt mutate original array; use only when you want to chain multiple methods together otherwise use the ... method (...arr)
+// let arr = ['a', 'b', 'c', 'd', 'e']
+// console.log(arr.slice(2)) // [ 'c', 'd', 'e' ]
+// console.log(arr.slice(2, 4)) // [ 'c', 'd' ]
+// console.log(arr.slice(-2)) // [ 'd', 'e' ] last elements of array
+// console.log(arr.slice(-1)) // [ 'e' ]
+// console.log(arr.slice(1, -2)) // [ 'b', 'c' ]
+// // use slice method to create shallow copy of array
+// console.log(arr.slice()) // [ 'a', 'b', 'c', 'd', 'e' ]
+// splice method; mutates original array
+// console.log(arr.splice(2)) // [ 'c', 'd', 'e' ]
+// arr.splice(-1) // [ 'a', 'b', 'c', 'd' ] // deleted last element from array
+// console.log(arr) // [ 'a', 'b' ] // splice deleted the elements that were extracted
+// reverse method; mutates original copy
+// const arr2 = ['j', 'i', 'h', 'g', 'f']
+// console.log(arr2.reverse()) // [ 'f', 'g', 'h', 'i', 'j' ]
+// console.log(arr2) // [ 'f', 'g', 'h', 'i', 'j' ] // reverse method mutated original array
+// concat method; doesnt mutate original array
+// const letters = arr.concat(arr2)
+// console.log(letters)
+// [
+//   'a', 'b', 'c', 'd',
+//   'e', 'f', 'g', 'h',
+//   'i', 'j'
+// ]
+// join method
+// console.log(letters.join('-')) // a-b-c-d-e-j-i-h-g-f
+// AT method
+// const arr = [23, 11, 64]
+// console.log(arr[0]) // 23 // array at position 0
+// console.log(arr.at(0)) // 23 // array at position 0 using AT method
+
+// console.log(arr[arr.length-1]) // 64 // last position using length
+// console.log(arr.slice(-1)[0]) // 64 // last position using slice method
+// console.log(arr.at(-1)) // 64 // last position using AT method
